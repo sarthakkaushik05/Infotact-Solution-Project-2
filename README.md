@@ -1,20 +1,40 @@
 # Infotact-Solution-Project-2
 
-# SaaS / E-Commerce Cohort Retention & CLTV Analysis
+# Project 3: Supply Chain Analytics — Demand Forecasting & Anomaly Detection
 
-An end-to-end implementation of Project 2 from the Infotact Data Analytics brief. It cleans transaction data, creates cohort-retention matrices, calculates historical CLTV by acquisition channel, segments customers, and produces executive-ready visuals.
+**Infotact Technical Internship Program — Advanced Data Analytics**
 
-## Project deliverables
+---
 
-| Requirement | Implementation |
-| --- | --- |
-| Transaction cleaning | Filters failed/refunded orders and invalid customer, quantity, and price records. |
-| Cohort matrix | Calculates each customer's first-purchase month and activity month index. |
-| Retention analysis | Exports absolute and percentage retention matrices. |
-| CLTV analysis | Calculates AOV, purchase frequency, historical CLTV, and VIP share by channel. |
-| Visualization | Produces a retention heatmap and channel-level retention-decay curves. |
-| Business storytelling | Documents findings and actions in `outputs/EXECUTIVE_SUMMARY.md`. |
+## Executive Problem Statement
 
-## Data provenance
+Supply chain efficiency dictates profitability for retail and manufacturing companies.
+Overestimating demand leads to bloated warehouses, tied-up capital, and spoilage.
+Underestimating demand leads to stockouts, lost sales, and furious customers.
+Unexpected anomalies (viral trends, supplier delays) often go unnoticed in massive
+datasets until the financial damage is already done.
 
-The code creates a deterministic, realistic **synthetic** retail dataset because the public dataset host was unavailable in this environment. This makes every result reproducible while avoiding the misrepresentation of generated results as live company data. For a real submission, replace `make_transactions()` with the approved transactional data source and rerun the pipeline
+This project builds a time-series analytics pipeline that:
+- Analyzes historical sales/inventory data to **forecast future demand**
+- Deploys statistical methods to **automatically detect anomalies** in the supply chain flow
+
+## Business Objectives & KPIs
+
+| Objective | Metric |
+|---|---|
+| Optimize inventory levels | Forecast accuracy — MAE, RMSE, MAPE / sMAPE |
+| Catch operational issues early | Anomaly detection precision (flag real outliers, avoid "alert fatigue") |
+
+## User Personas
+
+| Persona | Needs | Workflow |
+|---|---|---|
+| **Supply Chain Manager** | Data-driven procurement scheduling | Uses the demand forecast to order the right quantity of stock for the upcoming period |
+| **Operations Analyst** | Immediate notification of operational hiccups | Investigates flagged anomalies (e.g. sudden dispatch drop) |
+
+---
+
+## Tech Stack
+
+- **Python**: pandas, numpy, matplotlib, seaborn
+
