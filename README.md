@@ -1,6 +1,6 @@
 # Infotact-Solution-Project-2
 
-# Project 3: Supply Chain Analytics — Demand Forecasting & Anomaly Detection
+#  Supply Chain Analytics — Demand Forecasting & Anomaly Detection
 
 **Infotact Technical Internship Program — Advanced Data Analytics**
 
